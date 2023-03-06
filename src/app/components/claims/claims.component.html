@@ -1,0 +1,203 @@
+<!-- <p>claims works!</p> -->
+<div class="container column">
+  <div class="firstSection row">
+
+    <div class="col-sm-3 showDistributors">
+      <img class="img-claims img-thumbnail"
+        src="https://i.pinimg.com/236x/82/95/26/829526d9bb1610f15dec864212a8eb8d.jpg">
+      <p></p>
+      <div class="align-middle">
+        <button style="align-content: center;">Show distributors</button>
+      </div>
+    </div>
+
+    <div class="distributerTableDiv col-sm-8 panel-body table-responsive">
+      <table class="distributerTable table-fixedheader table-bordered table-striped" width="100%">
+        <thead class="bg-light">
+          <th>Branch</th>
+          <th>Distributer No.</th>
+          <th>Sap Code</th>
+          <th>Schema</th>
+          <th>Region</th>
+          <th>Type</th>
+          <th>last send date</th>
+          <th> </th>
+        </thead>
+
+        <tbody class="table-group-divider" style="height:110px">
+          <tr *ngFor="let item of dis">
+            <td>{{item.branch}}</td>
+            <td>{{item.distributerNo}}</td>
+            <td>{{item.sapCode}}</td>
+            <td>{{item.schema}}</td>
+            <td>{{item.region}}</td>
+            <td>{{item.type}}</td>
+            <td> <input type="date" value={{item.lastSendDate}} min="2000-01-01" max="2018-12-31">
+            </td>
+            <td>
+              <input type="checkbox" value="{{item.isChecked}}" />
+            </td>
+          </tr>
+
+
+
+        </tbody>
+
+      </table>
+
+      <!-- <table class="table-fixedheader table-bordered table-striped" width="100%">
+      <thead class="bg-light">
+        <th>Branch</th>
+        <th>Distributer No.</th>
+        <th>Sap Code</th>
+        <th>Schema</th>
+        <th>Region</th>
+        <th>Type</th>
+        <th>last send date</th>
+        <th> </th>
+      </thead>
+    </table> -->
+
+
+
+
+
+    </div>
+  </div>
+  <div class="mb-4">
+    <!-- <h6 class="text-uppercase">Solid</h6> -->
+    <!-- Solid divider -->
+    <hr class="solid">
+  </div>
+
+  <div class="secoundSection row">
+    <div class="col-sm">
+      <label class="col-sm-2"><strong>DD/MM/YYYY</strong> </label>
+      <p></p>
+      <div class="form-group row">
+        <label class="col-sm-3 "><strong>Date</strong></label>
+        <div class="col-sm-8">
+          <input class="form-control">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm">
+      <fieldset class="field border b-1" style="width:280px;">
+        <legend class="float-none w-auto "><strong>Auto claims</strong> </legend>
+        <input type="radio">
+        <label class="form-check-label">&ensp;WS,Cash,Promotion Discount</label>
+      </fieldset>
+    </div>
+    <div class="col-sm">
+      <fieldset class="field border b-1" style="width:280px;">
+        <legend class="float-none w-auto "><strong>Manual claims</strong> </legend>
+        <input type="radio">
+        <label class="form-check-label">&ensp;Other Discounts</label>
+      </fieldset>
+    </div>
+
+
+
+  </div>
+  <div class="mb-4">
+    <hr class="solid">
+  </div>
+  <div class="thirdSection row">
+
+    <div class="col-md-auto">
+      <button type="button" class="btn btn-secondary btn-lg">Generate the dates</button>
+    </div>
+    <div class="col-sm-auto">
+      <button type="button" class="btn btn-secondary btn-lg">Verify</button>
+    </div>
+    <div class="col-md-auto">
+      <button type="button" class="btn btn-secondary btn-lg">Generate the report</button>
+    </div>
+    <div class="col-sm-auto">
+      <button type="button" class="btn btn-secondary btn-lg">Confirm</button>
+    </div>
+    <div class="col-md-auto">
+      <button type="button" class="btn btn-secondary btn-lg">Charge to ECC</button>
+    </div>
+  </div>
+
+  <div class="forthSection ">
+    <fieldset class="field border b-1" style="width: 100%;">
+      <legend class="float-none w-auto "><strong>&ensp;Claims&ensp;</strong></legend>
+      <table class="claimsTable table-fixedheader table-bordered table-striped" width="100%">
+        <thead class="bg-light ">
+          <th>Branch</th>
+          <th>Article</th>
+          <th>Condition type</th>
+          <th>Discount Amount</th>
+          <th>Discount type</th>
+          <th>Internal Order</th>
+
+        </thead>
+
+        <tbody class="table-striped table-hover" style="height:110px">
+          <tr *ngFor="let item of claims">
+            <td>{{item.branch}}</td>
+            <td>{{item.article}}</td>
+            <td>{{item.conitionType}}</td>
+            <td>{{item.discountAmount}}</td>
+            <td>{{item.discountType}}</td>
+            <td>{{item.internalOrderNumber}}</td>
+
+          </tr>
+
+
+        </tbody>
+
+      </table>
+      <div class="mb-4">
+
+        <hr class="solid">
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm" >
+          <label class="col-sm-auto"><strong>Cash Discount</strong></label>
+          <div class="boxContainer col-sm-8" >
+              <label class="col-sm-2"></label>
+          </div>
+        </div>
+
+        <div class="col-sm" >
+          <label class="col-sm-auto"><strong>Promotion Discount</strong></label>
+          <div class="boxContainer col-sm-8" >
+              <label class="col-sm-2"></label>
+          </div>
+        </div>
+
+        <div class="col-sm" >
+          <label class="col-sm-auto"><strong>Other Discounts</strong></label>
+          <div class="boxContainer col-sm-8" >
+              <label class="col-sm-2"></label>
+          </div>
+        </div>
+            <div class="col-sm-auto">
+          <button type="button" class="btn btn-secondary btn-lg btn-block">Calculate the table</button>
+
+        </div>
+
+
+      </div>
+    </fieldset>
+
+    <div class="totalClaims row">
+      <label><strong>Total Claims Amount:</strong></label>
+      <div class="boxContainer col-sm-8" >
+        <label class="col-sm-2"></label>
+    </div>
+
+
+    </div>
+
+
+
+  </div>
+</div>

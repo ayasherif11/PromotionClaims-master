@@ -1,0 +1,81 @@
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+
+body {
+  background: #104879;
+  background-image: -moz-radial-gradient(center 45deg,circle cover, #9BD1FF, #2E95EF);
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%,800, from(#9BD1FF), to(#2E95EF));
+  padding-top: 15%;
+}
+
+.img-home {
+  max-width: 335px;
+  height:335px;
+
+}
+
+.img-content{
+  margin-right:40px;
+}
+
+.title {
+  color:#01203f;
+  text-shadow: 1px 1px 0 #888;
+  line-height: normal;
+  font-weight: 1em;
+  font-family: serif;
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight:bold;
+}
+
+.submit_login{
+  /* <!-- HTML !--> */
+/* <button class="button-18" role="button">Button 18</button> */
+
+/* CSS */
+/* .button-18 { */
+  align-items: center;
+  background-color: #01203f;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.submit_login:hover,
+.submit_login:focus {
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.submit_login:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.submit_login:disabled {
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
