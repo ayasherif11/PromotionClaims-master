@@ -5,14 +5,14 @@ import { ParmData } from 'src/app/models/parmetersData';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ParametersService {
-
   private apiServerUrl = environment.apiBaseUrl;
 
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient) {}
 
   public getParData(): Observable<ParmData[]> {
     return this.http.get<ParmData[]>(`${this.apiServerUrl}/parametres/all`);
-  }}
+  }
+}

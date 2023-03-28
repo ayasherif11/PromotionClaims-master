@@ -5,13 +5,12 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ClaimsService {
-
   private apiServerUrl = environment.apiBaseUrl;
 
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient) {}
 
   public getParData(): Observable<claimsData[]> {
     return this.http.get<claimsData[]>(`${this.apiServerUrl}/claims/all`);

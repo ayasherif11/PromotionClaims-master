@@ -1,19 +1,17 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ConditionTypesData } from 'src/app/models/conditionTypes';
 import { ConditionTypeService } from 'src/app/service/conditionTypes/condition-type.service';
 
 @Component({
   selector: 'app-condition-types',
   templateUrl: './condition-types.component.html',
-  styleUrls: ['./condition-types.component.css']
+  styleUrls: ['./condition-types.component.css'],
 })
-export class ConditionTypesComponent implements OnInit{
-
-
+export class ConditionTypesComponent implements OnInit {
   public conT: ConditionTypesData[] = [];
 
-  constructor(private conTypeService: ConditionTypeService){}
+  constructor(private conTypeService: ConditionTypeService) {}
 
   ngOnInit() {
     this.getData();
@@ -30,5 +28,4 @@ export class ConditionTypesComponent implements OnInit{
       }
     );
   }
-
 }
