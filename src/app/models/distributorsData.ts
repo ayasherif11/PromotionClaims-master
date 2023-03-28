@@ -8,7 +8,7 @@ export interface DistributorsData{
   // lastSendDate:String;
   // isChecked:boolean;
 
- branch:string;
+  branch:string;
   distributerNo:string;
   sapCode:string;
   schema:string;

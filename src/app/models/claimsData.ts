@@ -3,9 +3,9 @@ export interface claimsData{
   branch:string;
   article:string;
   conitionType:string;
-  discountAmount:number;
+  discountAmount:string;
   discountType:string;
-  internalOrderNumber:number;
+  internalOrderNumber:string;
 
 
 }

@@ -18,8 +18,22 @@
           <th>On Invoice</th>
 
         </thead>
-        <tbody class="table-group-divider">
-          <tr *ngfor="let item of conType">
+        <tbody class="table-group-divider" style="height:110px">
+          <tr *ngFor="let item of conT">
+            <td>{{item.scenario}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.condition_type}}</td>
+            <td>
+              <input type="checkbox" value="{{item.onInvoice}}" />
+            </td>
+          </tr>
+
+
+
+        </tbody>
+
+        <!-- <tbody class="table-group-divider">
+          <tr *ngfor="let item of conT">
             <td>{{item.scenario}}</td>
             <td>{{item.description}}</td>
             <td>{{item.conditionType}}</td>
@@ -30,7 +44,7 @@
           </tr>
 
 
-        </tbody>
+        </tbody> -->
       </table>
 
     </div>

@@ -1,7 +1,7 @@
-import { DistributorsData } from './../models/distributorsData';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { DistributorsData } from 'src/app/models/distributorsData';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -14,5 +14,5 @@ export class Claims1Service {
   constructor(private http: HttpClient){}
 
   public getClaims1Data(): Observable<DistributorsData[]> {
-    return this.http.get<DistributorsData[]>(`${this.apiServerUrl}/cummdist`);
+    return this.http.get<DistributorsData[]>(`${this.apiServerUrl}/dis/all`);
   }}

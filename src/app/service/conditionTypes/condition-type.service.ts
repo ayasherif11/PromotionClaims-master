@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, retry, catchError, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { ConditionTypesData } from '../models/conditionTypes';
+import { ConditionTypesData } from 'src/app/models/conditionTypes';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +13,8 @@ export class ConditionTypeService {
 
   constructor(private http: HttpClient){}
 
-  public getData(): Observable<ConditionTypesData[]> {
-    return this.http.get<ConditionTypesData[]>(`${this.apiServerUrl}/conditionTypes`);
+  public getConData(): Observable<ConditionTypesData[]> {
+    return this.http.get<ConditionTypesData[]>(`${this.apiServerUrl}/conType/all`);
   }
 
 

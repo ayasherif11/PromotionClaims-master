@@ -1,7 +1,7 @@
 export interface ConditionTypesData{
 
-  scenario:string;
+  scenario:String;
   description:string;
-  conditionType:string;
-  onInvoice:string;
+  condition_type:string;
+  onInvoice:String;
 }

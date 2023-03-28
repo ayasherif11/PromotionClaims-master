@@ -11,7 +11,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class ParametersComponent implements OnInit {
 
 
-  [x: string]: any;
+  // [x: string]: any;
   public par: ParmData[] = [];
 
   constructor(private parametersService: ParametersService){}

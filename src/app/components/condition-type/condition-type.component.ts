@@ -1,7 +1,7 @@
-import { ConditionTypeService } from './../../service/condition-type.service';
 import { Component ,OnInit } from '@angular/core';
 import { ConditionTypesData } from 'src/app/models/conditionTypes';
 import { HttpErrorResponse } from '@angular/common/http';
+import {FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-condition-type',
@@ -10,30 +10,31 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class ConditionTypeComponent implements OnInit{
 
-  [x: string]: any;
-  public conT: ConditionTypesData[] = [];
+  // // [x: string]: any;
+  // public conT: ConditionTypesData[] = [];
 
-  constructor(private conTypeService: ConditionTypeService){}
+  // constructor(private conTypeService: ConditionTypeService){}
 
-  ngOnInit() {
-    this.getData();
-  }
-
-  public getData(): void {
-    this.conTypeService.getData().subscribe(
-      (response: ConditionTypesData[]) => {
-        this.conT = response;
-        console.log(this.conT);
-      },
-      (error: HttpErrorResponse) => {
-        alert(error.message);
-      }
-    );
-  }
-  // ngOnInit(): void {
-  //   throw new Error('Method not implemented.');
+  // ngOnInit() {
+  //   this.getData();
   // }
-  //  conType: any;
+
+  // public getData(): void {
+  //   this.conTypeService.getConData().subscribe(
+  //     (response: ConditionTypesData[]) => {
+  //       this.conT = response;
+  //       console.log(this.conT);
+  //     },
+  //     (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //     }
+  //   );
+  // }
+
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+   conType: any;
   //  ConditionTypesData[]=[];
   // constructor(private _conTypeService: ConditionTypeService) { }
   // ngOnInit(): void {
@@ -43,16 +44,17 @@ export class ConditionTypeComponent implements OnInit{
   // conType: ConditionTypesData[];
 
 
-  // constructor() {
-  //   this.conType = [
-  //     { scenario: 11, description: "desc 1", conditionType: "A12", onInvoice: true },
-  //     { scenario: 13, description: "desc 2", conditionType: "B7", onInvoice: false },
-  //     { scenario: 53, description: "desc 3", conditionType: "Y77", onInvoice: true },
-  //     { scenario: 80, description: "desc 4", conditionType: "I88", onInvoice: false },
-  //     { scenario: 33, description: "desc 5", conditionType: "O76", onInvoice: false },
-  //     { scenario: 27, description: "desc 6", conditionType: "A23", onInvoice: true },
+  constructor() {
+    this.conType = [
+      { scenario: 11, description: "desc 1", conditionType: "A12", onInvoice: true },
+      { scenario: 13, description: "desc 2", conditionType: "B7", onInvoice: false },
+      { scenario: 53, description: "desc 3", conditionType: "Y77", onInvoice: true },
+      { scenario: 80, description: "desc 4", conditionType: "I88", onInvoice: false },
+      { scenario: 33, description: "desc 5", conditionType: "O76", onInvoice: false },
+      { scenario: 27, description: "desc 6", conditionType: "A23", onInvoice: true },
 
-  //   ];
-  // }
+    ];
+  }
 
 }
+

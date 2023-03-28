@@ -3,9 +3,11 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { RouterModule, Routes } from '@angular/router';
 import { ClaimsComponent } from './components/claims/claims.component';
-import { ConditionTypeComponent } from './components/condition-type/condition-type.component';
+// import { ConditionTypeComponent } from './components/condition-type/condition-type.component';
 import { LoginComponent } from './components/login/login.component';
 import { ParametersComponent } from './components/parameters/parameters.component';
+import { ConditionTypesComponent } from './components/condition-types/condition-types.component';
+import { ConditionTypeComponent } from './components/condition-type/condition-type.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -13,7 +15,7 @@ const routes: Routes = [
   { path: '', component: ParametersComponent },
   { path: 'par', component: ParametersComponent },
   { path: 'claims', component: ClaimsComponent },
-  { path: 'conditionTypes', component: ConditionTypeComponent },
+  { path: 'conditionTypes', component: ConditionTypesComponent },
 
 
   // { path: '**', component: AppComponent }
